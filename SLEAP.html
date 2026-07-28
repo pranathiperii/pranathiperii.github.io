@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pranathi Peri</title>
+<meta name="description" content="Pranathi Peri — functional genomics, computational biology, and a few self-directed detours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;0,9..144,700;1,9..144,450;1,9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-name">Pranathi Peri</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#origin">Story</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+      <li><a href="#work">Projects</a></li>
+      <li><a href="#wetlab">Wet Lab</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="article-page">
+  <div class="wrap">
+    <header class="article-header">
+      <a href="index.html" class="back-link">&larr; Back to home</a>
+      <h1>Automated Pose Tracking of Drosophila Mating Behavior with SLEAP </h1>
+      </div>
+    </header>
+
+    <article class="article-body">
+        <h2>Background and Goal</h2>
+        <p>
+        Male Drosophila melanogaster court females through a stereotyped sequence of actions, among the most well-documented is unilateral wing extension, where a male extends and vibrates a single wing at roughly 90 degrees to his body to produce a courtship song. Wing position and movement are a central, quantifiable signal in fly courtship research, and recent work in the field has used SLEAP-based pose estimation specifically to resolve fine-grained wing kinematics that manual scoring or older automated methods miss, including subtler bilateral wing behaviors alongside the classic unilateral display. This project applied that same approach to video recordings from a mating assay, with the goal of converting raw video into precise, frame-by-frame wing coordinate data suitable for downstream behavioral analysis.
+    </p>
+
+        <h2>Method </h2>
+        <p>
+        SLEAP is an open-source deep learning framework for multi-animal pose tracking, developed at Princeton and published in Nature Methods (Pereira et al., 2022). The workflow followed its standard human-in-the-loop pipeline. A subset of frames from the mating assay videos was manually annotated, marking key anatomical landmarks on each fly, including the left and right wing tips (WingL1, WingR1), to build a labeled training set. A pose estimation model was trained on these annotations, then run in inference mode across the full video set to automatically predict landmark coordinates for every frame, tracking multiple flies simultaneously.
+    </p>
+        <p> 
+       Because automated tracking can drift or misidentify landmarks, particularly during fast wing movements or when flies occlude one another, predicted tracking was reviewed manually in 20-frame batches across the videos. Frames where predicted landmark positions looked implausible, jumps, swapped left/right assignments, missed detections, were flagged and corrected before the trajectories were treated as final. This proofreading step is standard practice in SLEAP-based workflows and is what separates a usable dataset from raw, uncorrected model output.
+    </p>
+
+        <h2>Analysis</h2>
+<p> From the validated pose coordinates, two derived metrics were computed. Inter-wing distance, the distance between the WingL1 and WingR1 landmarks over time, was calculated and plotted both individually for each tracked fly and in aggregate across all flies, giving a direct, continuous readout of wing spread that spikes during extension events. Wing angle relative to the body axis was also tracked over time and rendered as annotated video, allowing visual confirmation that the numerical angle output actually corresponded to real courtship display behavior in the underlying footage, rather than a tracking artifact.
+
+</p>
+        <h3>Outcome</h3>
+        <p>
+            The result is a validated, per-frame kinematic dataset of wing position and angle across multiple flies in the mating assay, ready for downstream statistical or behavioral classification work by the lab. Beyond the dataset itself, this project involved the full applied pose-estimation workflow end to end: landmark annotation, model training, inference, manual quality control, and translating raw coordinates into biologically interpretable metrics, the same pipeline used in current published Drosophila courtship research.
+         </p>
+
+    </article>
+
+  </div>
+</main>
+
+</html>

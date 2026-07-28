@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pranathi Peri</title>
+  <meta name="description"
+    content="Pranathi Peri — functional genomics, computational biology, and a few self-directed detours.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;0,9..144,700;1,9..144,450;1,9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-name">Pranathi Peri</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#origin">Story</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#work">Projects</a></li>
+        <li><a href="#wetlab">Wet Lab</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <canvas id="lattice"></canvas>
+    <div class="wrap hero-inner">
+      <h1>Hi, I am <em>Pranathi!</em></h1>
+      <p class="lede">Novelty has been my north star since day one, and I love chasing that in science. I started out in
+        fundamental science and molecular biology, but kept finding myself pulled toward applying the discoveries rather
+        than just uncovering them. Scroll below to see how I've navigated the tangents in my career, plus a few
+        self-directed projects I did in my free time, simply because I was curious ;)</p>
+      <div class="cta-row">
+        <a href="#work" class="btn btn-primary">See the projects</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="origin" class="origin">
+    <div class="blob blob-gold"></div>
+    <div class="blob blob-moss"></div>
+    <div class="blob blob-terracotta"></div>
+    <div class="wrap origin-inner">
+      <div class="eyebrow">before the code</div>
+      <h2>It started at the bench</h2>
+      <p>My first years in science were entirely wet lab. Cloning constructs, running RNAi screens, counting flies under
+        a scope late at night. I loved the precision of it, and honestly, I still do.</p>
+      <p>Somewhere around my MSc the question I kept asking changed. It stopped being "what does this gene do" and
+        turned into "how do we actually use what we already know." Fundamental research answers the first one.
+        Translation and innovation answer the second, and that pull is where I keep ending up.</p>
+      <p>Most of what I build now lives at that junction, public datasets, models trained on someone else's sequencing
+        run, tools that take a finding already sitting in a paper and push it one step closer to something usable. The
+        wet lab habits never really left. They just moved into a notebook.</p>
+    </div>
+  </section>
+
+  <section id="timeline">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">education and experience</div>
+        <h2>The tangents so far</h2>
+      </div>
+      <div class="timeline">
+        <div class="t-item current">
+          <div class="t-year">2026 — Present</div>
+          <div class="t-role">Executive Business Analyst</div>
+          <div class="t-org">Foundation of Science and Development, Indian Institute of Science, Bengaluru, India</div>
+        </div>
+        <div class="t-item">
+          <div class="t-year">2024 — 2025</div>
+          <div class="t-role">Technical Assistant</div>
+          <div class="t-org">Max Planck Institute of Immunobiology and Epigenetics, Freiburg, Germany</div>
+        </div>
+        <div class="t-item">
+          <div class="t-year">2022 — 2023</div>
+          <div class="t-role">MSc Medical Genetics and Genomics</div>
+          <div class="t-org">University of Glasgow, UK</div>
+        </div>
+        <div class="t-item">
+          <div class="t-year">2019 — 2022</div>
+          <div class="t-role">BSc Life Sciences (Biochemistry, Genetics, and Biotechnology)</div>
+          <div class="t-org">Jain University, India</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">self-directed projects</div>
+        <p>Partly to sharpen my scientific thinking, partly to feed my often-called-annoying habit of asking questions.
+          Click Read More for the full writeup with data and figures.</p>
+      </div>
+
+      <div class="projects" id="projects"></div>
+    </div>
+  </section>
+
+  <section id="wetlab">
+    <div class="wrap">
+      <div class="wetlab">
+        <div class="eyebrow"> Wet Lab Experience</div>
+  
+
+        <h3> PCR-RFLP Genotyping of the VEGF rs699947 Polymorphism Across Human Populations </h3>
+          <p>My first hands on wet lab experience started during my MSc. One of the first projects was analysing
+            rs699947 SNP using a PCR based assay. For a course project, I optimized a PCR-RFLP assay to genotype
+            rs699947—a VEGF promoter SNP linked to cancer, stroke, and neurodegeneration—and benchmarked our lab's
+            434-sample dataset against global reference data.
+
+            Evaluating allele frequencies across populations revealed how subtle genetic variations influence
+            personalized disease risk, while empirical troubleshooting exposed the limits of static DNA assays.
+
+            Seeing how this single non-coding variant directly dictates VEGF transcript output became the pivotal spark
+            that pulled me into RNA biology.</p>
+
+        <h3> MSc dissertation - Using RNAi to manipulate mitochondrial function in Drosophila melanogaster </h3>
+          <p> For my dissertation, I worked on understanding mitochondrial function through RNA interference. The plan
+            was to restore Complex I activity in Drosophila by inserting the human gene NDUFS4 while silencing the fly
+            ortholog ND-18 through RNAi, using the GAL4/UAS system and the GeneSwitch variant of it to build the fly
+            lines, then reading out mRNA and protein levels alongside fly activity and oxygen consumption.</p>
+          <p> The human gene didn't show detectable expression in the ND-18-silenced line, most likely down to an error
+            in how the fly crosses were set up rather than anything biological. But the silencing itself worked exactly
+            as expected: flies with ND-18 knocked down showed reduced activity and respiration, confirming Complex I
+            depletion took hold. A follow-up trial to properly test the rescue would be the obvious next step, and the
+            underlying question, how much of Complex I function can be restored across species, still feels worth
+            chasing.
+
+          </p>
+
+          <h3> Assisting on a CRISPR/dCas9 based epigenome editing</h3>
+          <p>At the Max Planck Institute of Immunobiology and Epigenetics, I cloned and validated the GFP-tagged
+            effector constructs for four target genes, Eggless, E(z), BAP111, and Snr1, using pJET vectors, PCR
+            amplification, restriction digestion, ligation, bacterial transformation, and Sanger sequencing to confirm
+            each construct's identity before it moved forward into co-transfection experiments in S2 cells and
+            Drosophila. Epigenetics has always been fascinating and I was very excited to work in this lab and
+            contribute my technical expertise. But I found myself wanting to connect this fundamental research out of
+            the bench and into real world applications. While wet lab has enhanced my precision, my passion and
+            appreciation for how our cell biology dances, I wanted to use that wisdom towards translational research.
+          </p>
+          <div class="doc-note"><a class = "no-underline" href="pranathiperiCVjune2026.pdf">Click here for CV</a> </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="wrap">
+      <div class="footer-inner">
+        <div>
+          <div class="eyebrow">get in touch</div>
+          <h2 class="footer-title">Always up for a conversation about genomes, graphs, or good science.</h2>
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/pranathiperii" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/pranathiperii/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:pranathiperi7@gmail.com">Email</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>pranathiperii.github.io</span>
+
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ---------- mobile nav ---------- */
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }));
+
+    /* ---------- hero lattice: hexagonal spot grid w/ drifting graph edges ---------- */
+    (function () {
+      const canvas = document.getElementById('lattice');
+      const ctx = canvas.getContext('2d');
+      let w, h, points = [];
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function resize() {
+        w = canvas.width = canvas.offsetWidth * devicePixelRatio;
+        h = canvas.height = canvas.offsetHeight * devicePixelRatio;
+        buildGrid();
+      }
+
+      function buildGrid() {
+        points = [];
+        const spacing = 56 * devicePixelRatio;
+        const rowH = spacing * 0.87;
+        let row = 0;
+        for (let y = -spacing; y < h + spacing; y += rowH) {
+          const offset = (row % 2) * (spacing / 2);
+          for (let x = -spacing; x < w + spacing; x += spacing) {
+            points.push({
+              x: x + offset, y: y,
+              baseX: x + offset, baseY: y,
+              phase: Math.random() * Math.PI * 2,
+              active: Math.random() < 0.16
+            });
+          }
+          row++;
+        }
+      }
+
+      function draw(t) {
+        ctx.clearRect(0, 0, w, h);
+        const baseColor = '250,245,233';
+        const goldColor = '224,165,60';
+
+        for (const p of points) {
+          const drift = reduceMotion ? 0 : Math.sin(t / 2600 + p.phase) * 3 * devicePixelRatio;
+          p.x = p.baseX + drift;
+          p.y = p.baseY + drift * 0.4;
+        }
+
+        ctx.lineWidth = 1 * devicePixelRatio;
+        for (let i = 0; i < points.length; i++) {
+          const a = points[i];
+          if (!a.active) continue;
+          for (let j = i + 1; j < points.length; j++) {
+            const b = points[j];
+            if (!b.active) continue;
+            const dx = a.x - b.x, dy = a.y - b.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 90 * devicePixelRatio) {
+              const alpha = (1 - dist / (90 * devicePixelRatio)) * 0.28;
+              ctx.strokeStyle = `rgba(${baseColor},${alpha})`;
+              ctx.beginPath();
+              ctx.moveTo(a.x, a.y);
+              ctx.lineTo(b.x, b.y);
+              ctx.stroke();
+            }
+          }
+        }
+
+        for (const p of points) {
+          const r = (p.active ? 2.6 : 1.6) * devicePixelRatio;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
+          ctx.fillStyle = p.active ? `rgba(${goldColor},0.8)` : `rgba(${baseColor},0.22)`;
+          ctx.fill();
+        }
+
+        if (!reduceMotion) requestAnimationFrame(draw);
+      }
+
+      window.addEventListener('resize', resize);
+      resize();
+      requestAnimationFrame(draw);
+    })();
+
+    /* ---------- project data + render ---------- */
+    const projects = [
+      {
+        tag: "graph neural networks · spatial transcriptomics",
+        title: "Gene expression prediction from H&E histology using graph neural networks",
+        summary: "A GNN that predicts spatial gene expression straight from routine H&E tissue images, using 10x Visium mouse brain data and a pretrained ResNet50 wired into a spatial proximity graph.",
+        media: "assets/gene-expression-prediction-project-fig.jpeg",
+        href: "gene-expression-prediction.html"
+      },
+      {
+        tag: "machine learning · epigenetics",
+        title: "Epigenetics and gene expression in colorectal cancer",
+        summary: "Six candidate genes found consistently dysregulated across three independent GEO datasets, then tested against 456 TCGA-COAD patients with matched RNA-seq and methylation data.",
+        media: "assets/RF.png",
+        href: "ML_CRC.html"
+      },
+      {
+        tag: "GWAS · eQTL · single-cell",
+        title: "GWAS, eQTL, and epigenomic integration to prioritize regulatory disease loci",
+        summary: "Six waist-to-hip-ratio GWAS loci carried through GTEx eQTL colocalization, ENCODE regulatory annotation, and a 166,149-cell adipose atlas to see which ones point to a real mechanism.",
+        media: "assets/rflna_adipose.png",
+        href: "GWAS.html"
+
+      },
+      {
+        tag: "DeepMind AlphaGenome · variant effect prediction",
+        title: "AlphaGenome-driven functional screening of endometriosis GWAS risk loci",
+        summary: "Eight replicated endometriosis GWAS loci screened zero-shot through AlphaGenome across 16,384bp windows in uterine tissue tracks, validated against matched real control variants.",
+        media: "assets/Screenshot 2026-07-25 133243.png",
+        href: "Alphagenome.html"
+      },
+      {
+        tag: "SLEAP · pose estimation · behavior",
+        title: "Automated pose tracking of Drosophila mating behavior with SLEAP",
+        summary: "Trained and ran SLEAP pose estimation models on Drosophila mating assay videos to convert raw footage into frame-by-frame wing coordinate data for courtship behavior analysis.",
+        media: "assets/Screenshot 2026-07-19 104921.png",
+        href: "SLEAP.html"
+      }
+    ];
+
+    const projectsEl = document.getElementById('projects');
+
+    projects.forEach((proj) => {
+      const card = document.createElement('div');
+      card.className = 'card';
+
+      const mediaHTML = proj.media
+        ? `<div class="card-media"><img src="${proj.media}" alt="${proj.title}"></div>`
+        : '';
+
+      card.innerHTML = `
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="card-text">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <div class="card-tag">${proj.tag}</div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div class="card-title">${proj.title}</div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <p class="card-summary">${proj.summary}</p>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <a class="read-more" href="${proj.href}" target="_blank" rel="noopener">Read More →</a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ${mediaHTML}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  `;
+
+      projectsEl.appendChild(card);
+    });
+  </script>
+
+</body>
+
+</html>
+>
